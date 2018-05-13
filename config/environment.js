@@ -12,6 +12,7 @@ module.exports = function(environment) {
     databaseURL: 'https://football-55031.firebaseio.com',
     storageBucket: 'football-55031.appspot.com',
     },
+    torii: { sessionServiceName: 'session' },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
