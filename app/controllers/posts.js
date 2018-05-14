@@ -6,7 +6,7 @@ export default Controller.extend({
   actions: {
     publishPost: function() {
       var newPost = this.store.createRecord('post', {
-        username: this.get('username'),
+        email: this.get('email'),
         body: this.get('body'),
         timestamp: new Date().getTime()
       });

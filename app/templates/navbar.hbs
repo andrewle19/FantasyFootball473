@@ -16,7 +16,7 @@
 {{#if session.isAuthenticated}}
     {{#link-to 'index' class="navbar-brand"}}{{session.currentUser.email}}{{/link-to}}
     {{#link-to 'posts' tagName="li"}}<a href="">Start Chatting</a>{{/link-to}}
-    <button class='btn btn-default navbar-btn' {{action 'signOut'}}>Sign Out</button>
+    <button class='btn btn-default navbar-btn' {{action 'sign_out'}}>Sign Out</button>
 {{else}}
   {{#link-to 'index' class="navbar-brand"}}FUCK YOU TNIG{{/link-to}}
   {{#link-to 'sign-up' tagName="li"}}<a href="">sign up</a>{{/link-to}}
