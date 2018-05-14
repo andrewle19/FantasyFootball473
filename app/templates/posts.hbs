@@ -1,7 +1,7 @@
 <h2>New Post</h2>
 <ul class="post-publish">
   <li>
-    {{input value=title placeholder="Title"}}
+    {{input value=username placeholder="username"}}
   </li>
   <li>
     {{textarea value=body placeholder="Body"}}
@@ -13,7 +13,7 @@
 
 <section>
 {{#each model as |post|}}
-  <div>{{post.title}}</div>
+  <div>{{post.username}}</div>
   <div>{{post.body}}</div>
 {{/each}}
 </section>
