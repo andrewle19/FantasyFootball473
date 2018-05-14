@@ -1,21 +1,5 @@
-{{#if session.isAuthenticated}}
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">{{session.currentUser.email}}</a>
-        </div>
-        <ul class="nav navbar-nav">
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <button class='btn btn-default navbar-btn' {{action 'signOut'}}>Sign Out</button>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-{{else}}
-<h1>Fuck Steve</h1>
-{{/if}}
-{{outlet}}
+<div class="container">
+  {{partial 'navbar'}}
+  {{outlet}}
+</div>
