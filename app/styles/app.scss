@@ -2,4 +2,124 @@
 
 body {
   padding-top: 20px;
+  background-color: #1A79DB;
+}
+
+.navbar {
+  background-color: #1A79DB;
+}
+
+.navbar-collapse {
+  background-color: black;
+
+  .navbar-brand {
+    font-size: 32px;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 3px;
+  }
+
+  .home-link {
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+.form-horizontal {
+  margin-left: 18%;
+}
+
+
+.box-title {
+  padding: 0 0 20px 0;
+  font-size: 36px;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.input-title {
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 200;
+}
+
+.jumbotron {
+  background-color: black;
+}
+
+input {
+  margin-top: 10px;
+}
+
+.button {
+  background-color: #1A79DB;
+}
+
+.signin-buttons {
+  margin-left: 29%;
+  margin-top: 20px;
+}
+
+
+
+.post-page {
+  .post-title {
+    margin-top: 60px;
+    margin-left: 20%;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 3px;
+
+
+  }
+
+  .post-feed-holder {
+    margin-left: 50%;
+  }
+
+  .post-feed-title {
+    margin-top: -340px;
+    margin-left: 170px;
+  }
+
+  .post-textarea {
+    margin-top: 50px;
+    margin-left: 80px;
+  }
+
+  .publish-btn {
+    margin-top: 30px;
+    margin-left: 150px;
+    width: 300px;
+  }
+
+
+  .post-display {
+    width: 400px;
+    border-style: solid;
+    height: 500px;
+    font-size: 14px;
+    margin-top: 40px;
+    margin-left: 60px;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+
+    .post-email {
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+
+    .post-text {
+      font-size: 18px;
+      margin-left: 150px;
+    }
+  }
+
 }

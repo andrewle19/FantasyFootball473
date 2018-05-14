@@ -1,19 +1,32 @@
-<h2>New Post</h2>
-<ul class="post-publish">
+<div class="post-page">
 
-  <li>
-    {{textarea value=body placeholder="Body"}}
-  </li>
-  <li>
-    <button {{action "publishPost"}}>Publish</button>
-  </li>
-</ul>
+  <h2 class="post-title">New Post</h2>
 
-<section>
-{{#each model as |post|}}
-  <div>{{post.email}}</div>
-  <div>{{post.body}}</div>
-{{/each}}
-</section>
+  <div class="post-publish">
+    <div class="post-textarea">
+      {{textarea rows="10" cols="60" value=body placeholder="What's on your mind?"}}
+    </div>
+    <div class="publish-button">
+      <button class="publish-btn" {{action "publishPost"}}>Publish</button>
+    </div>
+
+  </div>
+
+  <div class="post-feed-holder">
+    <h2 class="post-title post-feed-title">Post Feed</h2>
+
+    <div class="post-display">
+      {{#each model as |post|}}
+        <div class="post-email">{{post.email}}</div>
+        <div class="post-text">{{post.body}}</div>
+      {{/each}}
+    </div>
+  </div>
+
+
+
+</div>
+
+
 
 {{outlet}}
