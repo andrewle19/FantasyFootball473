@@ -9,8 +9,11 @@ export default Controller.extend({
         email: this.get("session.currentUser.email"),
         body: this.get('body'),
         timestamp: new Date().getTime()
+
       });
       newPost.save();
-    }
+      this.set('body', '');
+    },
+
   }
 });

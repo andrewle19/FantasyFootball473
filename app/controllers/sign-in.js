@@ -12,11 +12,15 @@ export default Controller.extend({
                 }).then(() => {
                     controller.set('email', null);
                     controller.set('password', null);
-                    console.log("sup")
 
                 }, (error) => {
+
                     console.log(error);
+                    this.set('responseMessage', error);
+                    controller.set('email', null);
+                    controller.set('password', null);
                 });
+
             }
         }
     }
