@@ -4,7 +4,7 @@ export default Route.extend({
   beforeModel: function() {
   return this.get('session').fetch().catch(function() {});
   },
-  model: function() {
-    return this.store.findAll('post');
+  model: async function() {
+    return this.store.findAll('post').then(arr => arr.toArray().reverse());
   }
 });

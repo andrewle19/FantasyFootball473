@@ -85,35 +85,41 @@ input {
   .post-title {
     font-size: 36px;
     margin-top: 60px;
-    margin-left: 20%;
-    color: white;
+    margin-left: 10%;
+    color: black;
     font-weight: 100;
     letter-spacing: 3px;
 
 
   }
 
-  .post-feed-holder {
-    margin-left: 50%;
-  }
+  //.post-feed-holder {
+  //  margin-left: 50%;
+  //}
 
-  .post-feed-title {
-    margin-top: -456px;
-    margin-left: 170px;
-  }
+  //.post-feed-title {
+  //  margin-top: -456px;
+  //  margin-left: 170px;
+  //}
 
-  .post-textarea {
-    margin-top: 50px;
-    margin-left: 80px;
+  //.post-textarea {
+  //  margin-top: 50px;
+  //  margin-left: 80px;
+  //}
+
+  .col-6 textarea {
+    max-width: 500px;
   }
 
   textarea {
+    resize: none;
     background-color: black;
     color: white;
     font-weight: 100;
     letter-spacing: 2px;
     font-size: 18px;
     padding: 20px;
+    width: 100%;
     border-style: solid;
     border-width: 1px;
     border-color: white;
@@ -134,9 +140,11 @@ input {
   .publish-btn {
 
     padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 30px;
-    margin-left: 250px;
-    width: 120px;
+    //margin-left: 250px;
+    //width: 120px;
     border-style: solid;
     border-width: 1px;
     border-color: white;
@@ -150,6 +158,10 @@ input {
     -webkit-box-shadow: 12px 22px 99px -15px rgba(0,0,0,0.71);
     -moz-box-shadow: 12px 22px 99px -15px rgba(0,0,0,0.71);
     box-shadow: 12px 22px 99px -15px rgba(0,0,0,0.71);
+  }
+
+  .publish-button .row {
+    margin-left: 100px;
   }
 
 
@@ -191,3 +203,5 @@ input {
   }
 
 }
+
+@import "ember-bootstrap/bootstrap";
