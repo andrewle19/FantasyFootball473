@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav">
+
+{{#if session.isAuthenticated}}
+    {{#link-to 'posts' class="navbar-brand"}}{{session.currentUser.email}}{{/link-to}}
+    {{#link-to 'posts' tagName="li"}}<a href="">Start Chatting</a>{{/link-to}}
+    
+    <button class='btn btn-default navbar-btn' {{action 'sign_out'}}>Sign Out</button>
+{{else}}
+  {{#link-to 'index' class="navbar-brand"}}Talks Cheap{{/link-to}}
+  {{#link-to 'sign-up' tagName="li"}}<a href="" class="home-link">sign up</a>{{/link-to}}
+  {{#link-to 'sign-in' tagName="li"}}<a href="" class="home-link">sign in</a>{{/link-to}}
+{{/if}}
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
