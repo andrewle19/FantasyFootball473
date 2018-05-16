@@ -82,30 +82,27 @@ input {
 
 
 .post-page {
-  .post-title {
+  .new-post-title {
     font-size: 36px;
     margin-top: 60px;
-    margin-left: 10%;
+    margin-left: 0px;
     color: black;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 3px;
-
-
   }
 
-  //.post-feed-holder {
-  //  margin-left: 50%;
-  //}
+  .post-instructions {
+    margin: 20px 0;
+  }
 
-  //.post-feed-title {
-  //  margin-top: -456px;
-  //  margin-left: 170px;
-  //}
-
-  //.post-textarea {
-  //  margin-top: 50px;
-  //  margin-left: 80px;
-  //}
+  .post-feed-title {
+    margin-top: 60px;
+    margin-left: 60px;
+    font-size: 36px;
+    color: black;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
 
   .col-6 textarea {
     max-width: 500px;
@@ -143,8 +140,7 @@ input {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 30px;
-    //margin-left: 250px;
-    //width: 120px;
+    margin-right: 30px;
     border-style: solid;
     border-width: 1px;
     border-color: white;
