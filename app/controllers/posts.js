@@ -26,6 +26,7 @@ export default Controller.extend({
             image: true
           });
           newPost.save();
+          this.set('body','')
         });
     }
   }
