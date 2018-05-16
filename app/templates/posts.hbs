@@ -29,7 +29,7 @@
       <div class="col-md-6">
         <div class="post-feed-holder">
           <h2 class="post-title post-feed-title">Post Feed</h2>
-          <div class="post-display">
+          <div id= "post-display" class="post-display">
             {{#each model as |post|}}
               <div class="post-email">{{post.email}}</div>
             {{#if post.image}}
@@ -45,5 +45,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  var elem = document.getElementById('post-display');
+  elem.scrollTop = elem.scrollHeight;
+</script>
 
 {{outlet}}
