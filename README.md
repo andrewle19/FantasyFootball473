@@ -2,11 +2,14 @@
 
 Talks cheap is a chat app which allows users to chat with multiple users at once. It uses the giphy api to send gifs into the chat.
 
-##Authors
+## Authors
 Andrew Le
 Hector Bern
+
 Eric Fratzke
+
 Syed Hussaini
+
 Steve Sanchez
 
 ## Prerequisites
@@ -29,6 +32,7 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+
 
 ### Code Generators
 
