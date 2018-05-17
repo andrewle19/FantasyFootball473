@@ -9,32 +9,27 @@ export default Controller.extend({
 
     actions: {
         registerToDB() {
-            const auth = this.get('firebaseApp').auth();
+          const auth = this.get('firebaseApp').auth();
+          const password = this.get('password');
 
+          auth.createUserWithEmailAndPassword(this.get('email'), this.get('password')).
+                  then((userResponse) => {
+                    auth.createUserWithEmailAndPassword(this.get('email'), this.get('password')).then((userResponse) => {
+                  const newUser = this.store.createRecord('user', {
+                      password: password,
+                      id: userResponse.uid,
+                      email: userResponse.email
 
-            const email = this.get('email');
-            const password = this.get('password');
-            if (password.length < 6){
-              this.set('responseMessage', ``);
-              this.set('errorMessage', `Your password must be longer than 6 characters`);
-              return;
-            }
-
-            auth.createUserWithEmailAndPassword(email, password).
-                then((userResponse) => {
-                    const newUser = this.store.createRecord('user', {
-
-                        password: password,
-                        id: userResponse.uid,
-                        email: userResponse.email
-                    });
-                     newUser.save();
+                  });
+                   newUser.save();
                 });
+                   this.set('responseMessage', `We have registered your email address: ${this.get('email')}`);
+                   this.set('email','')
+                   this.set('password','')
+                  },(error) => {
+                  this.set('failMessage',error);
+                 })
 
-            this.set('responseMessage', `We have registered your email address:
-            ${this.get('email')}`);
-            this.set('errorMessage', ``);
-            this.set('emailAddress', '');
-        }
     }
+}
 });
