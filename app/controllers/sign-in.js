@@ -12,9 +12,9 @@ export default Controller.extend({
                 }).then(() => {
                     controller.set('email', null);
                     controller.set('password', null);
-
+                    location.replace('/posts')
                 }, (error) => {
-                    this.set('responseMessage', error);
+                    this.set('failMessage', error);
                     controller.set('email', null);
                     controller.set('password', null);
                 });
