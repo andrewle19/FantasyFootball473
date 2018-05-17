@@ -1,7 +1,13 @@
-# football
+# Talks Cheap
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Talks cheap is a chat app which allows users to chat with multiple users at once. It uses the giphy api to send gifs into the chat.
+
+##Authors
+Andrew Le
+Hector Bern
+Eric Fratzke
+Syed Hussaini
+Steve Sanchez
 
 ## Prerequisites
 
@@ -15,7 +21,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd football`
+* `cd TalksCheap`
 * `npm install`
 
 ## Running / Development
