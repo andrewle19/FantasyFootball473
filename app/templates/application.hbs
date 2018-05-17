@@ -2,6 +2,12 @@
 <div class="container">
   {{partial 'navbar'}}
   <!-- {{partial 'home-screen'}} -->
+  {{#if session.isAuthenticated}}
+  {{else}}
+    <h1>Please Let Steve and Andrew Graduate</h1>
+
+  {{/if}}
+
   {{outlet}}
-  
+
 </div>
