@@ -4,7 +4,8 @@ Talks cheap is a chat app which allows users to chat with multiple users at once
 
 ## Authors
 Andrew Le
-Hector Bern
+
+Hector Bernal
 
 Eric Fratzke
 
