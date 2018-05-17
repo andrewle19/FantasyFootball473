@@ -5,19 +5,28 @@
         <div class="post-publish">
           <div class="container">
             <div class="row">
-              <h2 class="new-post-title">New Post</h2>
-              <p class="post-instructions">Hit 'Publish' to publish text <br>Hit 'Publish GIF' to publish a GIF that goes with your text</p>
-
+              <h2 class="post-title">New Post</h2>
+              <p>Hit 'Publish' to publish text or hit 'Publish GIF' to publish a GIF that goes with your text</p>
               <div class="col-6">
                 <div class="post-textarea">
+                  {{#if errorMessage}}
+                    <div class="alert alert-danger">{{errorMessage}}</div>
+                  {{/if}}
                   {{textarea rows="10" value=body placeholder="What's on your mind?"}}
                 </div>
               </div>
               <div class="col-6">
+                {{#if gifs}}
+                <div class="gif-display">
+                  {{#each giffy as |gif index|}}
+                      <img width="150px" {{action "selectGIF" gif}} src={{gif.images.original.url}}>
+                  {{/each}}
+                </div>
+                {{/if}}
                 <div class="publish-button">
                   <div class="row">
-                    <button class="publish-btn" {{action "publishPost"}}>Publish</button>
-                    <button class="publish-btn" {{action "publishGIF"}}>Publish GIF</button>
+                    <button class="publish-btn" {{action "publishPost"}} >Publish</button>
+                    <button class="publish-btn" {{action "publishGIF"}} >Publish GIF</button>
                   </div>
                 </div>
               </div>
@@ -29,11 +38,11 @@
       <div class="col-md-6">
         <div class="post-feed-holder">
           <h2 class="post-title post-feed-title">Post Feed</h2>
-          <div id= "post-display" class="post-display">
+          <div id="post-display" class="post-display">
             {{#each model as |post|}}
               <div class="post-email">{{post.email}}</div>
             {{#if post.image}}
-              <div class="post-text"><img width="150px" src={{post.body}}></div>
+              <div class="post-text"><img width="200px" src={{post.body}}></div>
             {{else}}
               <div class="post-text">{{post.body}}</div>
             {{/if}}

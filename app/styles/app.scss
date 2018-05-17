@@ -108,6 +108,15 @@ input {
     max-width: 500px;
   }
 
+  .col-6 .alert {
+    max-width: 500px;
+  }
+  .col-6 .gif-display {
+    max-width: 500px;
+    max-height: 200px;
+    overflow: auto;
+  }
+
   textarea {
     resize: none;
     background-color: black;
